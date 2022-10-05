@@ -14,7 +14,7 @@ public class TaskManager {
         System.out.println("Please select an option");
         System.out.println("add"+"\n"+"remove"+"\n"+"list"+"\n"+"exit");
         String option = scan.next();
-        if(option.equals("add")){
+        if(option.equals("add")){     // a jak byś to zastąpił switch case ?
 
         }else if(option.equals("remove")){
 
@@ -29,7 +29,7 @@ public class TaskManager {
     }
     public static void readFile(String fileName) {
 
-            Path path = Paths.get(fileName);
+            Path path = Paths.get(fileName);    //tej wuja ale tu tylko robisz zmienna path, jeszcze by trzeba jakoś ten plik wczytać gdzieś co nie ?
             String [][] tab = new String[5][5];
             for(int i = 0; i < tab.length; i++){
                 for(int j = 0; j < tab[i].length; j++){
