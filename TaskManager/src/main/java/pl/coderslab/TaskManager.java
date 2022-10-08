@@ -14,7 +14,7 @@ public class TaskManager {
         System.out.println("Please select an option");
         System.out.println("add"+"\n"+"remove"+"\n"+"list"+"\n"+"exit");
         String option = scan.next();
-        if(option.equals("add")){
+        if(option.equals("add")){      // zmień to na switch case
 
         }else if(option.equals("remove")){
 
