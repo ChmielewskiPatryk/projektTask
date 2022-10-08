@@ -13,8 +13,9 @@ import java.util.*;
 
 
 public class TaskManager {
-    private static  List<String[]> csvData;
-    ;
+    private static  List<String[]> csvData; // <- całość miała być na tablicach panie a nie już na listac, pozatym z punktu widzenia Javy
+    // Listr<String[]> jest bezsensowne.
+    ; // <- co to ??
 //nie wiem o co chodzi generalnie, program generalnie zapisuje to co wpisze w konsoli. Ale prosi mnie o to dwa razy
 //    i generalnie pierwsze się nie zapisuje tylko to drugie co wpiszę do pliku. Zostawiam to nie widzę błedu czy
 //    innego rozwiązanie generalnie. 
@@ -26,7 +27,7 @@ public class TaskManager {
         System.out.println("Please select an option");
         System.out.println("add"+"\n"+"remove"+"\n"+"list"+"\n"+"exit");
         String option = scan.next();
-        if(option.equals("add")){
+        if(option.equals("add")){    // zmień to na swich case, ile zadań wgl możesz dodać do tego programu ? odczytywanie opcji z option powinno chyba być jednak w pętli while
             writeToFile(filePath);
         }else if(option.equals("remove")){
 //
@@ -38,7 +39,7 @@ public class TaskManager {
         csvData = creatCsvData(filePath);
     }
     public static List<String[]> creatCsvData(String filePath){
-        List<String[]> csvData = writeToFile(filePath);
+        List<String[]> csvData = writeToFile(filePath); // zmień na tablicę, 
         try (CSVWriter writer = new CSVWriter(new FileWriter(filePath,true))) {
             writer.writeAll(csvData);
         }catch (IOException var5) {
@@ -78,7 +79,7 @@ public class TaskManager {
 
 
 
-
+      // tej weź używaj ctrl+l i usuwaj takie przerwy bo to źle wygląda
     }
 }
 
